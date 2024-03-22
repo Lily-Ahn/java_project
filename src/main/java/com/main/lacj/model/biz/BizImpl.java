@@ -41,6 +41,15 @@ public class BizImpl implements Biz{
 	public int update(MemberDto dto) {
 		return 0;
 	}
+	
+	
+	@Override
+	public int updatemember(MemberDto dto) {
+			
+		return mapper.updatemember(dto);
+	}
+	
+	
 
 	@Override
 	public int delete(int mno) {

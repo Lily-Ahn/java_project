@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.main.lacj.model.dto.BoardDto;
 import com.main.lacj.model.dto.MemberDto;
@@ -22,4 +23,7 @@ public interface Mapper {
 	
     @Select(" SELECT * FROM MULTIMEMBER WHERE MID = #{mid} AND MPW = #{mpw}  ")
     MemberDto selectLogin(MemberDto dto);
+    
+    @Update(" UPDATE MULTIMEMBER SET MPW = #{mpw} WHERE MNO= #{mno} ")
+    public int updatemember(MemberDto dto);
 }

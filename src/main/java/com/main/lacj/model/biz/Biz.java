@@ -15,6 +15,7 @@ public interface Biz {
 	public int insertRegi(MemberDto dto);
 	public int insertBoard(@Param("btitle") String btitle, @Param("bcontent")String bcontent ,@Param("bimg")String bimg, @Param("mno")int mno);
 	public int update(MemberDto dto);
+	public int updatemember(MemberDto dto);
 	public int delete(int mno);
     public MemberDto selectLogin(MemberDto dto);
 }
